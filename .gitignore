@@ -1,1 +1,3 @@
 build/*
+iOSmasiCore_Prefix.pch
+masicore.xcodeproj/*
