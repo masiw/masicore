@@ -58,6 +58,12 @@ namespace masi {
 		
 	}
 	
+    Rectangle::~Rectangle() {
+        
+        setPosition(0);
+        setSize(0);
+    }
+    
 	Point * Rectangle::getPosition() {
 		return _position;
 	}
@@ -81,7 +87,7 @@ namespace masi {
 				retain(_position);
 			}
 			
-			getNotificationCentre()->dispatchNotification(new Notification(CHANGE, this));
+			getNotificationCentre()->dispatchNotification(CHANGE, this);
 		}
 	}
 	
@@ -107,7 +113,7 @@ namespace masi {
 				retain(_size);
 			}
 			
-			getNotificationCentre()->dispatchNotification(new Notification(CHANGE, this));
+			getNotificationCentre()->dispatchNotification(CHANGE, this);
 		}
 	}
 	

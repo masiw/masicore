@@ -17,6 +17,8 @@ namespace masi {
 	typedef std::map< Object *, std::map< unsigned int, std::vector< Observer * > > >::iterator SubjectIterator;
 	typedef std::map< unsigned int, std::vector< Observer * > >::iterator TypeIterator;
 	typedef std::vector< Observer * >::iterator ObserverIterator;
+    
+    typedef std::map<Object *, std::map<unsigned int, std::vector<Observer *> > > ObserverMap;
 	
 	NotificationCentre * NotificationCentre::defaultCentre = new NotificationCentre();
 	
@@ -128,8 +130,13 @@ namespace masi {
 		
 		return false;
 	}
-	void NotificationCentre::dispatchNotification(Notification * notification) {
+    
+    
+	void NotificationCentre::dispatchNotification(unsigned int type, Object * subject) {
 		
+        Notification * notification = new Notification(type, subject);
+        retain(notification);
+        
 		SubjectIterator subjectIterator = observers.find(notification->getSubject());
 		
 		if (subjectIterator != observers.end()) {
@@ -144,6 +151,8 @@ namespace masi {
 				}
 			}
 		}
+        
+        release(notification);
 	}
 	
 	

@@ -19,10 +19,10 @@ namespace masi {
 		
 	private:
 		
-		double _width;
-		double _height;
+		double _width = 0.0;
+		double _height = 0.0;
 		
-		NotificationCentre * _notificationCentre;
+		NotificationCentre * _notificationCentre = 0;
 		
 	public:
 		Size();

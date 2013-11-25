@@ -72,7 +72,7 @@ namespace masi {
 	}
 	
 	// Adds child at <code>index<code/>, or does nothing if <code>index<code/> greater than <code>numChildren</code>.
-	void DisplayObject::addChildAt(DisplayObject * displayObject, unsigned int index)
+	void DisplayObject::addChildAt(DisplayObject * displayObject, unsigned long index)
 	{
 		if (index <= numChildren()) {
 			std::vector<DisplayObject*>::iterator it;
@@ -112,7 +112,7 @@ namespace masi {
 	}
 	// Removes and returns the child that is found at <arg name="index"/>,
 	// or returns NULL if the index is greater than the number of children.
-	DisplayObject * DisplayObject::removeChildAt(unsigned int index)
+	DisplayObject * DisplayObject::removeChildAt(unsigned long index)
 	{
 		DisplayObject * removedChild = NULL;
 		
@@ -141,7 +141,7 @@ namespace masi {
 	
 	// Returns the child that is found at <arg name="index"/>,
 	// or NULL if the index is greater than the number of children.
-	DisplayObject * DisplayObject::getChildAt(unsigned int index)
+	DisplayObject * DisplayObject::getChildAt(unsigned long index)
 	{
 		DisplayObject * child = NULL;
 		
@@ -174,7 +174,7 @@ namespace masi {
 	
 	// Reorders the children so that the <arg name="displayObject"/> is put at <arg name="newIndex"/>
 	// in the child list, if <code>displayObject</code> is found in the children, else it has no effect.
-	void DisplayObject::setChildIndex(DisplayObject * displayObject, unsigned int newIndex)
+	void DisplayObject::setChildIndex(DisplayObject * displayObject, unsigned long newIndex)
 	{
 		for (int i = 0; i < numChildren(); i++) {
 			if (_children[i] == displayObject) {
@@ -188,7 +188,7 @@ namespace masi {
 	// Reorders the children so that the <code>DisplayObject</code> at <code>oldIndex</code> is put at <code>newIndex<code/>
 	// in the child list, if <code>oldIndex</code> is smaller then <code>numChildren()</code>, else it
 	// does nothing.
-	void DisplayObject::setChildIndexAt(unsigned int oldIndex, unsigned int newIndex)
+	void DisplayObject::setChildIndexAt(unsigned long oldIndex, unsigned long newIndex)
 	{
 		if (oldIndex < numChildren() && newIndex < numChildren()) {
 			
@@ -218,7 +218,7 @@ namespace masi {
 	}
 	// Moves the <code>DisplayObject</code> found at <code>childIndex</code> to the top of the display list,
 	//if <code>childIndex</code> is smaller than <code>numChildren</code>, otherwise it has no effect.
-	void DisplayObject::moveChildAtToFront(unsigned int childIndex)
+	void DisplayObject::moveChildAtToFront(unsigned long childIndex)
 	{
 		setChildIndexAt(childIndex, numChildren() - 1);
 	}
@@ -229,7 +229,7 @@ namespace masi {
 	}
 	// Moves the <code>DisplayObject</code> found at <code>childIndex</code> to the bottom of the display list,
 	//if <code>childIndex</code> is smaller than <code>numChildren</code>, otherwise it has no effect.
-	void DisplayObject::moveChildAtToBack(unsigned int childIndex)
+	void DisplayObject::moveChildAtToBack(unsigned long childIndex)
 	{
 		setChildIndexAt(childIndex, 0);
 	}
@@ -241,15 +241,15 @@ namespace masi {
 	
 	// Returns the number of child <code>DisplayObject</code> that currently are in this components
 	// child collection.
-	unsigned int DisplayObject::numChildren()
+	unsigned long DisplayObject::numChildren()
 	{
 		return _children.size();
 	}
 	
 	
-	int DisplayObject::getZOrder()
+	long DisplayObject::getZOrder()
 	{
-		int zOrder = -1;
+		long zOrder = -1;
 		
 		if (getParent() != 0) {
 			

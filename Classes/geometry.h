@@ -14,4 +14,4 @@
 #include "Size.h"
 #include "Rectangle.h"
 
-#endif GEOMETRY_H_
+#endif // GEOMETRY_H_

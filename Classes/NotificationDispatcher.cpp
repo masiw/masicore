@@ -31,7 +31,7 @@ namespace masi {
 			
 			if (_notificationCentre) {
 				
-				value->inheritObserversOfSubject(this, _notificationCentre);
+				value->inheritObserversOfSubject(this, _notificationCentre, true);
 				release(_notificationCentre);
 			}
 			

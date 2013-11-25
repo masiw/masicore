@@ -39,7 +39,7 @@ namespace masi {
 			
 			_width = value;
 			
-			getNotificationCentre()->dispatchNotification(new Notification(CHANGE, this));
+			getNotificationCentre()->dispatchNotification(CHANGE, this);
 		}
 	}
 	
@@ -52,7 +52,7 @@ namespace masi {
 			
 			_height = value;
 			
-			getNotificationCentre()->dispatchNotification(new Notification(CHANGE, this));
+			getNotificationCentre()->dispatchNotification(CHANGE, this);
 		}
 	}
 	

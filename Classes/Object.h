@@ -16,7 +16,7 @@ namespace masi
 		
 	private:
 		
-		unsigned int _retainCount;
+		unsigned int _retainCount = 0;
 		
 		void increaseRetainCount();
 		void decreaseRetainCount();

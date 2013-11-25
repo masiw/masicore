@@ -18,11 +18,11 @@ namespace masi {
 		
 	private:
 		
-		double _x;
-		double _y;
-		double _z;
+		double _x = 0.0;
+		double _y = 0.0;
+		double _z = 0.0;
 		
-		NotificationCentre * _notificationCentre;
+		NotificationCentre * _notificationCentre = 0;
 		
 	public:
 		

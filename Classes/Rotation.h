@@ -21,11 +21,11 @@ namespace masi {
 	class Rotation : public Object{
 		
 	private:
-		double _angle;
-		Point * _axis;
+		double _angle = 0.0;
+		Point * _axis = 0;
 		
-		RedispatchObserver * changeObserver;
-		NotificationCentre * _notificationCentre;
+		RedispatchObserver * changeObserver = 0;
+		NotificationCentre * _notificationCentre = 0;
 		
 	public:
 		Rotation();

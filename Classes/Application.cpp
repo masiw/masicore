@@ -25,7 +25,7 @@ namespace masi
 		if (_mainApplication == 0) {
 			_mainApplication = this;
 		}
-		_shouldLoop != shouldLoop;
+		_shouldLoop = shouldLoop;
 		_rootView = (DisplayObject *)retain(rootView);
 	}
 	

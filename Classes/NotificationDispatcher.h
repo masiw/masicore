@@ -19,7 +19,7 @@ namespace masi {
 		
 	private:
 		
-		NotificationCentre * _notificationCentre;
+		NotificationCentre * _notificationCentre = 0;
 		
 	public:
 		

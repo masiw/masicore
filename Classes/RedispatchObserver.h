@@ -18,8 +18,8 @@ namespace masi {
 	class RedispatchObserver : public Observer {
 		
 	private:
-		NotificationCentre * _notificationCentre;
-		Object * _subject;
+		NotificationCentre * _notificationCentre = 0;
+		Object * _subject = 0;
 	public:
 		RedispatchObserver();
 		RedispatchObserver(Object * subject, NotificationCentre * notificationCentre);

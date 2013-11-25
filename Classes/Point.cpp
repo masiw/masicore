@@ -51,7 +51,7 @@ namespace masi {
 			
 			_x = value;
 			
-			getNotificationCentre()->dispatchNotification(new Notification(CHANGE, this));
+			getNotificationCentre()->dispatchNotification(CHANGE, this);
 		}
 	}
 	
@@ -64,7 +64,7 @@ namespace masi {
 			
 			_y = value;
 			
-			getNotificationCentre()->dispatchNotification(new Notification(CHANGE, this));
+			getNotificationCentre()->dispatchNotification(CHANGE, this);
 		}
 	}
 	
@@ -77,7 +77,7 @@ namespace masi {
 			
 			_z = value;
 			
-			getNotificationCentre()->dispatchNotification(new Notification(CHANGE, this));
+			getNotificationCentre()->dispatchNotification(CHANGE, this);
 		}
 	}
 	

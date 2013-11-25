@@ -47,7 +47,8 @@ namespace masi {
 		void addObserver(Object * subject, Observer * observer, unsigned int type);
 		void removeObserver(Object * subject, Observer * observer, unsigned int type);
 		bool hasObserver(Object * subject, Observer * observer, unsigned int type);
-		void dispatchNotification(Notification * notification);
+		//void dispatchNotification(Notification * notification);
+        void dispatchNotification(unsigned int type, Object * subject);
 		
 		void inheritObserversOfSubject(Object * subject, NotificationCentre * notificationCentre, bool removeObservers);
 		

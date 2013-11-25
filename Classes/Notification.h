@@ -19,8 +19,8 @@ namespace masi {
 	class Notification : public Object {
 		
 	private:
-		unsigned int _type;
-		Object * _subject;
+		unsigned int _type = 0;
+		Object * _subject = 0;
 		
 	public:
 		Notification();

@@ -17,7 +17,7 @@ namespace masi {
 	class Color : public Object {
 		
 	private:
-		unsigned int _intValue;
+		unsigned int _intValue = 0;
 		
 	public:
 		Color();

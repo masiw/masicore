@@ -32,7 +32,7 @@ namespace masi {
 	}
 	
 	void RedispatchObserver::notify(Notification * notification) {
-		getNotificationCentre()->dispatchNotification(new Notification(notification->getType(), getSubject()));
+		getNotificationCentre()->dispatchNotification(notification->getType(), getSubject());
 	}
 	
 	

@@ -23,17 +23,18 @@ namespace masi {
 	class Rectangle : public Object {
 		
 	private:
-		Point * _position;
-		Size * _size;
+		Point * _position = 0;
+		Size * _size = 0;
 		
-		RedispatchObserver * changeObserver;
-		NotificationCentre * _notificationCentre;
+		RedispatchObserver * changeObserver = 0;
+		NotificationCentre * _notificationCentre = 0;
 		
 	public:
 		Rectangle();
 		Rectangle(Point * position, Size * size);
 		Rectangle(double x, double y, double width, double height);
-		
+		~Rectangle();
+        
 		Point * getPosition();
 		void setPosition(Point * value);
 		

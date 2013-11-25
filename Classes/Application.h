@@ -19,17 +19,14 @@ namespace masi
 	{
 	private:
 		bool _shouldLoop;
-		DisplayObject * _rootView;
+		DisplayObject * _rootView = 0;
 		
 		static Application * _mainApplication;
 		
 	protected:
 		Application();
 		
-		
 	public:
-		
-		static Application * getApplication();
 		
 		Application(DisplayObject * rootView, bool shouldLoop);
 		virtual ~Application();

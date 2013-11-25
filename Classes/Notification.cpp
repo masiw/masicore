@@ -27,7 +27,7 @@ namespace masi {
 		setSubject(subject);
 	}
 	Notification::~Notification(){
-		setType(0);
+		//setType(0);
 		setSubject(0);
 	}
 	
